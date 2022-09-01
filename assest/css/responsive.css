@@ -1,0 +1,60 @@
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .singleSlide {
+        background-size: cover;
+    }
+
+    .login-modal-content {
+        padding: 50px 40px;
+        width: 70%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    header {
+        /* position: static; */
+    }
+
+    .nav-item-link {
+        display: none;
+    }
+
+    /* Slider */
+    #sliderNext {
+        right: 14px;
+    }
+    #sliderPrev  {
+        left: 14px;
+    }
+    .slideOverlay {
+        padding: 148px 50px;    
+    }
+    .singleSlide {
+        background-size: cover;
+    }
+
+    /* Login Modal */
+    .login-modal-content {
+        padding: 60px 40px;
+        width: 76%;
+    }
+
+    .btn-primary.btn-search {
+        display: none;
+    }
+
+    .footer-container {
+        overflow: hidden;
+    }
+
+    .footer-heading {
+        margin-left: 15px;
+    }
+    
+    .social-list,
+    .tutorial-list,
+    .foot-contact {
+        margin-left: 15px;
+    }
+}

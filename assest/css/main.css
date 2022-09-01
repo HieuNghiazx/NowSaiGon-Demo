@@ -1,0 +1,651 @@
+* {
+    
+}
+
+html {
+  scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    font-weight: 500;
+}
+
+main {
+
+}
+
+header {
+    width: 100%;
+    background-color: rgb(255 250 241);
+    box-shadow: 0px 4px 6px #ccc;
+    top: 0;
+    position: sticky;
+    z-index: 1;
+    
+}
+
+/* Scroll Indicator */
+.progress-container {
+  width: 100%;
+  height: 3px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 3px;
+  background: #04AA6D;
+  width: 0%;
+}
+
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo-img {
+    width: 35%;
+
+}
+
+.header-nav {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-item {
+    padding: 5px 20px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.nav-item-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.content {
+  
+}
+
+/* Home Slider */
+.home-header-slide {
+    font-size: 48px;
+    font-weight: 500;
+    margin: 20px 0;
+  }
+   
+.home-title-slide {
+    font-size: 24px;
+    margin: 38px 0;
+  }
+   
+.home-slide-link {
+    padding: 10px 25px;
+    background-color: #4ca74c;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+  }
+
+.home-slide-link:hover {
+    opacity: 0.9;
+  }
+
+#homeSlider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 550px;
+  }
+  
+  .singleSlide {
+    /* background-size: cover; */
+    height: 550px;
+    position: absolute;
+    left: 100%;
+    width: 100%;
+    top: 0px;
+  }
+  
+  .slideOverlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 175px 50px;
+    color: wheat;
+    text-align: center;
+  }
+  
+  #sliderNav {
+    position: relative;
+    top: -280px;
+  }
+  
+  #sliderNav:hover {
+    cursor: pointer;
+  }
+  
+  #sliderPrev {
+    position: relative;
+    float: left;
+    left: 50px;
+  }
+  
+  #sliderNext {
+    position: relative;
+    float: right;
+    right: 50px;
+  }
+  
+  #sliderNext img,
+  #sliderPrev img {
+    width: 32px;
+  }
+  
+  @-webkit-keyframes slideIn {
+    100% {
+      left: 0;
+    }
+  }
+  
+  @keyframes slideIn {
+    100% {
+      left: 0;
+    }
+  }
+  
+  .slideInRight {
+    left: -100%;
+    -webkit-animation: slideIn 1s forwards;
+    animation: slideIn 1s forwards;
+  }
+  
+  .slideInLeft {
+    left: 100%;
+    -webkit-animation: slideIn 1s forwards;
+    animation: slideIn 1s forwards;
+  }
+  
+  @-webkit-keyframes slideOutLeft {
+    100% {
+      left: -100%;
+    }
+  }
+  
+  @keyframes slideOutLeft {
+    100% {
+      left: -100%;
+    }
+  }
+  
+  .slideOutLeft {
+    -webkit-animation: slideOutLeft 1s forwards;
+    animation: slideOutLeft 1s forwards;
+  }
+  
+  @-webkit-keyframes slideOutRight {
+    100% {
+      left: 100%;
+    }
+  }
+  
+  @keyframes slideOutRight {
+    100% {
+      left: 100%;
+    }
+  }
+  
+  .slideOutRight {
+    -webkit-animation: slideOutRight 1s forwards;
+    animation: slideOutRight 1s forwards;
+  }
+
+/* Home Highlights */
+.home-highlight-wrap {
+  padding-bottom: 80px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.home-highlight-content {
+  margin: 50px 0px;
+  padding: 0 50px;
+  text-align: center;
+}
+
+.highlight-logo {
+  font-size: 100px;
+  color: darkseagreen;
+}
+
+.highlight-title {
+  margin: 20px 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--black-color);
+}
+
+
+.highlight-title-wrap {
+
+}
+
+.highlight-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--black-color);
+  line-height: 1.6;
+}
+
+.counter {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 20px;
+  color: red;
+}
+
+
+/* Clothing Content */
+.clothing-container {
+  margin-top: 40px;
+  padding-bottom: 80px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.clothing-nav {
+  color: var(--black-color);
+}
+
+.clothing-nav-list {
+  list-style: none;
+}
+
+.clothing-nav-item {
+  font-weight: 350;
+  margin: 5px 0;
+  padding: 10px;
+  transform: translateX(0);
+  transition: transform ease 0.5s;
+}
+
+.clothing-nav-link {
+  text-decoration: none;
+  color: var(--black-color);
+  transition: color ease 0.3s;
+}
+
+.clothing-nav-item:hover a{
+  color: #0089ff;
+  transition: color ease 0.2s;
+}
+
+.clothing-nav-item:hover{
+  transform: translateX(5px);
+  transition: transform ease 0.5s;
+  cursor: pointer;
+}
+
+.clothing-nav-item:first-child a{
+  color: #0089ff;
+}
+
+.clothing-show {
+  color: var(--black-color);
+}
+
+.clothing-fill {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px var(--break-content-color);
+}
+
+.clothing-sort-container {
+  display: flex;
+  align-items: center;
+}
+
+.clothing-sort > select {
+  font-family: "Roboto",sans-serif;
+    border: solid 1px #ebebeb;
+    padding: 0px 10px;
+    font-size: 16px;
+    width: 160px;
+    height: 33px;
+    line-height: 33px;
+    outline: none;
+}
+
+.clothing-sort-container > p {
+  margin-right: 15px;
+}
+
+/* Search Product */
+.btn-primary.btn-search{
+  border-radius: 5px;
+    padding: 4px 40px;
+    line-height: 1.7;
+    margin-left: 30px;
+}
+
+.btn-search > i {
+  margin-right: 10px;
+}
+
+.search-box-overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+}
+
+.search-overlay-content {
+  position: relative;
+  top: 30%;
+  width: 50%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.search-box-overlay .search-box-closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+
+.search-box-overlay .search-box-closebtn:hover {
+  color: #ccc;
+}
+
+.search-box-overlay input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 70%;
+  background: white;
+  outline: none;
+}
+
+.search-box-overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
+
+.search-overlay-content button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  transition: background-color ease-in-out 0.3s;
+}
+
+.search-box-overlay button:hover {
+  background-color: #4ca74c;
+  color: var(--white-color);
+  transition: background-color ease-in-out 0.3s;
+}
+
+.main-product {
+  margin-top: 40px;
+  padding: 0 8px;
+}
+
+.main-product-thumbnail {
+
+}
+
+.product-thumnail-link {
+  
+}
+
+.product-thumnail-img {
+  width: 100%;
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: none;
+  transition: opacity, box-shadow ease-in-out 0.3s;
+  transition: transform ease-in-out 0.3s;
+}
+
+.product-thumnail-img:hover {
+  opacity: 0.8;
+  box-shadow: 0px 7px 10px #ccc;
+  transform: translateY(-3px);
+  transition: opacity, box-shadow ease-in-out 0.3s;
+  transition: transform ease-in-out 0.2s;
+}
+
+.product-infor {
+  
+}
+
+.product-name {
+  
+}
+
+.product-name-link:hover {
+  color: #0089ff;
+  transition: color ease-in-out 0.2s;
+}
+
+.product-name-link {
+  text-decoration: none;
+  color: var(--black-color);
+  font-weight: 400;
+  transition: color ease-in-out 0.2s;
+}
+
+.product-price {
+
+}
+
+.specical-price {
+  font-weight: 700;
+}
+
+.clothing-btn-wrap {
+  display: flex;
+  margin: auto;
+}
+
+.clothing-btn {
+ margin: 60px 0;
+}
+
+/* Contact */
+.contact {
+  margin-bottom: 80px;
+}
+
+.address-list {
+  list-style: circle;
+  margin-top: 50px;
+}
+
+.address-item {
+  margin: 15px;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--black-color);
+  transition: color ease-in-out 0.3s;
+}
+
+.address-item:hover {
+  cursor: pointer;
+  color: #0089ff;
+  transition: color ease-in-out 0.3s;
+}
+
+/* Footer */
+.footer-container {
+  background-color: #000;
+  padding: 40px 0;
+}
+
+.footer-heading > span {
+  color: var(--white-color);
+  font-size: 18px;
+  font-weight: 700;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #FFF;
+}
+
+
+.social-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.social-item-link {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+.social-list-item {
+  margin-right: 30px;
+  font-size: 30px;
+}
+
+.tutorial-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.tutorial-item-link {
+  text-decoration: none;
+  color: var(--white-color);
+  font-weight: 400;
+  transition: color ease-in-out 0.3s;
+}
+
+.tutorial-item-link:hover {
+  color: #0089ff;
+  transition: color ease-in-out 0.3s;
+}
+
+.tutorial-list-item {
+  margin: 5px 0;
+  padding: 10px 0;
+}
+
+.foot-contact {
+  margin-top: 30px;
+}
+
+.address-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 5px 0;
+  padding: 10px 0;
+}
+.address-block > span {
+  color: var(--white-color);
+  width: 25px;
+}
+.address-block > p  {
+  color: var(--white-color);
+  width: calc(100% - 25px);
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/* User Login Modal Box */
+
+/* The Modal (background) */
+.login-modal {
+  display: none; 
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  padding-top: 180px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.login-modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px 40px;
+  border: 1px solid #888;
+  width: 30%;
+}
+
+/* The Close Button */
+.login-close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  transition: color ease-in-out 0.2s;
+  position: relative;
+  top: -12px;
+  left: 18px;
+}
+
+.login-close:hover,
+.login-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color ease-in-out 0.2s;
+}
+
+/* Main Modal Login Content */
+.login-modal-heading {
+
+}
+
+.modal-login-input {
+  display: block;
+  width: 90%;
+  margin-top: 20px;
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  line-height: 1.6;
+}
+
+.modal-login-input:focus {
+  outline: none;
+}
+
+.btn-primary.btn-login {
+  margin-top: 23px;
+  border-radius: 3px;
+}
+
+.modal-login-title {
+  font-weight: 400;
+}
+

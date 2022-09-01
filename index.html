@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assest/css/main.css">
+    <link rel="stylesheet" href="./assest/css/base.css">
+    <link rel="stylesheet" href="./assest/css/grid-library.css">
+    <link rel="stylesheet" href="./assest/css/responsive.css">
+    <link rel="shortcut icon" href="./assest/img/now-logo.jpg" type="image/x-icon">
+
+    <link rel="stylesheet" href="./assest/icon/fontawesome-free-5.15.4-web/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+
+    <title>NEED OF WISDOM ®</title>
+</head>
+<body>
+    <div class="main">
+      <header>
+          <div class="grid wide">
+             <div class="header-content">
+              <div class="header-logo">
+                  <img class="header-logo-img" src="./assest/img/now-logo.jpg" alt="logo">
+              </div>
+              <div class="header-nav">
+                  <ul class="nav-list">
+                      <a href="#homeSlider" class="nav-item-link">
+                        <li class="nav-item hover-underline-animation">HOME</li>
+                      </a>
+                      <a href="#Clothing" class="nav-item-link">
+                        <li class="nav-item hover-underline-animation">Clothing</li>
+                      </a>
+                      <a href="#Contact" class="nav-item-link">
+                        <li class="nav-item hover-underline-animation">Contact</li>
+                      </a>
+                      <li class="nav-item hover-underline-animation" id="userBtn">
+                        <i class="fas fa-user"></i>
+                      </li>
+                      <li class="nav-item hover-underline-animation">
+                        <i class="fas fa-shopping-basket"></i>
+                      </li>
+                      
+                  </ul>
+              </div>
+            </div>
+          </div> 
+
+          <!-- Scroll Indicator -->
+              <div class="progress-container">
+              <div class="progress-bar" id="progressBar"></div>
+              </div>
+         </header>
+         <div id="homeSlider"></div>
+                    <div id="sliderNav">
+                        <div id="sliderPrev" onclick="prevSlide();"><img src="https://nguyenvanhieu.vn/wp-content/uploads/2020/09/left-arrow.png"></div>
+                        <div id="sliderNext" onclick="nextSlide();"><img src="https://nguyenvanhieu.vn/wp-content/uploads/2020/09/right-arrow.png"></div>
+                    </div>
+      <div class="grid wide">
+        <div class="row">
+          <div class="l-12 m-12 c-12">
+    
+              <!-- User Log In Modal Box -->
+               <div class="login-modal" id="userModal">
+    
+                <!-- Modal content -->
+                <div class="login-modal-content">
+    
+                  <span class="login-close">&times;</span>
+                    <div class="login-modal-heading">Let's login with us</div>
+                    <input type="text" placeholder="Email" class="modal-login-input">
+                    <input type="password" placeholder="Mật khẩu" class="modal-login-input" id="loginPass">
+                    <input type="checkbox" onclick="showPass()" style="margin-top: 20px;"> Show Password <br></br>
+                    <a href="" class="btn-link">
+                      <button class="btn-primary btn-login">Login</button>
+                    </a>
+                    <p class="modal-login-title">Nếu bạn chưa có tài khoản, vui lòng đăng ký <a href="http://">tại đây</a></p>              
+    
+                </div>
+    
+               </div>
+    
+               <div class="content">
+                
+    
+                    <div class="home-highlight-wrap">
+                        <div class="grid wide">
+                          <div class="row">
+                            <div class="l-4 m-12 c-12">
+                                <div class="home-highlight-content">
+                                <div class="highlight-logo"><i class="fas fa-truck"></i></div>
+                                <div class="highlight-title">Giao hàng toàn quốc.</div>
+                                  
+                                    <div class="highlight-subtitle">Nhận hàng sớm nhất sau              
+                                      <div class="counter">72</div> giờ.
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="l-4 m-12 c-12">
+                                <div class="home-highlight-content">
+                                  <div class="highlight-logo"><i class="fas fa-gifts"></i></div>
+                                  <div class="highlight-title">Ngập tràn quà tặng</div>
+                                    
+                                      <div class="highlight-subtitle">Hơn              
+                                        <div class="counter">2000</div> voucher, ưu đãi giảm giá cùng <br> các phần quà khác đang chờ đợi. </br>
+                                      </div>
+                              </div>
+                                
+                            </div>
+                            <div class="l-4 m-12 c-12">
+                                <div class="home-highlight-content">
+                                  <div class="highlight-logo"><i class="fas fa-user-shield"></i></div>
+                                  <div class="highlight-title">Bảo hiểm sản phẩm.</div>
+                                    
+                                      <div class="highlight-subtitle">Đổi trả, hoàn tiền               
+                                        <div class="counter">100</div>%. Sau 7 ngày <br> nếu sản phẩm lỗi hoặc thiếu sót. </br>
+                                      </div>
+                              </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+    
+                    <div id="Clothing" class="clothing-container">
+                      <div class="heading">CLOTHING</div>
+                 <div class="grid wide">
+                    <div class="row">
+                      <div class="l-4 m-0 c-0">
+                        <div class="clothing-nav">
+                          <h3>DANH MỤC SẢN PHẨM</h3>
+                          <ul class="clothing-nav-list">
+                              <li class="clothing-nav-item">
+                                <a href="" class="clothing-nav-link">ALL ITEMS</a>
+                              </li>
+                              <li class="clothing-nav-item">
+                                <a href="" class="clothing-nav-link">TEE</a>
+                              </li>
+                              <li class="clothing-nav-item">
+                                <a href="" class="clothing-nav-link">BOTTOM</a>
+                              </li>
+                              <li class="clothing-nav-item">
+                                <a href="" class="clothing-nav-link">JACKET</a>
+                              </li>
+                              <li class="clothing-nav-item">
+                                <a href="" class="clothing-nav-link">HOODIE</a>
+                              </li>
+                              <li class="clothing-nav-item">
+                                <a href="" class="clothing-nav-link">SWEATER</a>
+                              </li>
+                              <li class="clothing-nav-item">
+                                <a href="" class="clothing-nav-link">CAP</a>
+                              </li>
+                              <li class="clothing-nav-item">
+                                <a href="" class="clothing-nav-link">SHIRTS</a>
+                              </li>
+                              <li class="clothing-nav-item">
+                                <a href="" class="clothing-nav-link">ACCESSORIES</a>
+                              </li>
+                              <li class="clothing-nav-item">
+                                <a href="" class="clothing-nav-link">WASH/TIE DYE</a>
+                              </li>
+                              <li class="clothing-nav-item">
+                                <a href="" class="clothing-nav-link">SALE</a>
+                              </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="l-8 m-12 c-12">
+                        <div class="clothing-show">
+                          <div class="clothing-fill">
+                            <h3>Tất cả sản phẩm</h3>
+                            <div class="clothing-sort-container">
+                              <p>Sắp xếp</p>
+                              <div class="clothing-sort">
+                                <select name="clothing-sort" id="clothing-sort-select">
+                                  <option value="default">Mặc định</option>
+                                  <option value="default">A -> Z</option>
+                                  <option value="default">Z -> A</option>
+                                  <option value="default">Giá tăng dần</option>
+                                  <option value="default">Giá giảm dần</option>
+                                  <option value="default">Hàng mới nhất</option>
+                                  <option value="default">Hàng cũ nhất</option>
+                                </select>
+                              </div>
+                              <div class="btn-link">
+                                <button class="btn-primary btn-search" onclick="openSearch()"><i class="fa fa-search"></i>Search</button>
+                              </div>  
+                            </div>
+                          </div>
+    
+                          <!-- Search Box -->
+                          <div id="searchOverlay" class="search-box-overlay">
+                            <span class="search-box-closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+                            <div class="search-overlay-content">
+                              <form action="/action_page.php">
+                                <input type="text" placeholder="Search.." name="search">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                              </form>
+                            </div>
+                          </div>
+    
+                          <div class="row">
+                            <div class="l-4 m-12 c-12">
+                              <div class="main-product">
+                                <div class="main-product-thumbnail">
+                                  <a href="" class="product-thumnail-link">
+                                    <img class="product-thumnail-img" src="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/1-00905237-a2f5-4133-b297-5aac52280c85.jpg?v=1661053384000" data-lazyload="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/1-00905237-a2f5-4133-b297-5aac52280c85.jpg?v=1661053384000" alt="IHTW TEE - CREAM">
+                                  </a>
+                                  <div class="product-infor">
+                                    <h3 class="product-name">
+                                      <a class="product-name-link" href="/ihtw-tee-cream" title="IHTW TEE - CREAM">IHTW TEE - CREAM</a>
+                                    </h3>
+                                    <div class="product-price">
+                                      <span class="specical-price">
+                                        395.000₫
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="l-4 m-12 c-12">
+                              <div class="main-product">
+                                <div class="main-product-thumbnail">
+                                  <a href="" class="product-thumnail-link">
+                                    <img class="product-thumnail-img" src="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/5-1001c118-9f0d-441c-be27-d7338e0edb93.jpg?v=1660635298000" data-lazyload="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/5-1001c118-9f0d-441c-be27-d7338e0edb93.jpg?v=1660635298000" alt="STRAIGHT RAW SWEATPANTS - CREAM">
+                                  </a>
+                                  <div class="product-infor">
+                                    <h3 class="product-name">
+                                      <a class="product-name-link" href="/ihtw-tee-cream" title="IHTW TEE - CREAM">IHTW TEE - CREAM</a>
+                                    </h3>
+                                    <div class="product-price">
+                                      <span class="specical-price">
+                                        545.000₫
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="l-4 m-12 c-12">
+                              <div class="main-product">
+                                <div class="main-product-thumbnail">
+                                  <a href="" class="product-thumnail-link">
+                                    <img class="product-thumnail-img" src="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/3-227437a1-7a20-402c-8a84-004a297a82ff.jpg?v=1660635229000" data-lazyload="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/3-227437a1-7a20-402c-8a84-004a297a82ff.jpg?v=1660635229000" alt="STRAIGHT RAW SWEATPANTS - GREEN">
+                                  </a>
+                                  <div class="product-infor">
+                                    <h3 class="product-name">
+                                      <a class="product-name-link" href="/ihtw-tee-cream" title="IHTW TEE - CREAM">IHTW TEE - CREAM</a>
+                                    </h3>
+                                    <div class="product-price">
+                                      <span class="specical-price">
+                                        545.000₫
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="l-4 m-12 c-12">
+                              <div class="main-product">
+                                <div class="main-product-thumbnail">
+                                  <a href="" class="product-thumnail-link">
+                                    <img class="product-thumnail-img" src="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/1-f08470da-0bf5-4815-be87-69ab887e643a.jpg?v=1660635231000" data-lazyload="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/1-f08470da-0bf5-4815-be87-69ab887e643a.jpg?v=1660635231000" alt="STRAIGHT RAW SWEATPANTS - BLACK">
+                                  </a>
+                                  <div class="product-infor">
+                                    <h3 class="product-name">
+                                      <a class="product-name-link" href="/ihtw-tee-cream" title="IHTW TEE - CREAM">IHTW TEE - CREAM</a>
+                                    </h3>
+                                    <div class="product-price">
+                                      <span class="specical-price">
+                                        545.000₫
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="l-4 m-12 c-12">
+                              <div class="main-product">
+                                <div class="main-product-thumbnail">
+                                  <a href="" class="product-thumnail-link">
+                                    <img class="product-thumnail-img" src="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/1-compressed-9eaaa614-a68d-40fc-b6d5-0705da468564.jpg?v=1660634931000" data-lazyload="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/1-compressed-9eaaa614-a68d-40fc-b6d5-0705da468564.jpg?v=1660634931000" alt="FLOATING MARCUS TEE - BLACK">
+                                  </a>
+                                  <div class="product-infor">
+                                    <h3 class="product-name">
+                                      <a class="product-name-link" href="/ihtw-tee-cream" title="IHTW TEE - CREAM">IHTW TEE - CREAM</a>
+                                    </h3>
+                                    <div class="product-price">
+                                      <span class="specical-price">
+                                        380.000₫
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="l-4 m-12 c-12">
+                              <div class="main-product">
+                                <div class="main-product-thumbnail">
+                                  <a href="" class="product-thumnail-link">
+                                    <img class="product-thumnail-img" src="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/1-9c2e079c-2e92-40d2-a0f8-6ad98ba8969f.jpg?v=1659346873000" data-lazyload="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/1-9c2e079c-2e92-40d2-a0f8-6ad98ba8969f.jpg?v=1659346873000" alt="RAW RAGLAN SWEATER - GREEN">
+                                  </a>
+                                  <div class="product-infor">
+                                    <h3 class="product-name">
+                                      <a class="product-name-link" href="/ihtw-tee-cream" title="IHTW TEE - CREAM">IHTW TEE - CREAM</a>
+                                    </h3>
+                                    <div class="product-price">
+                                      <span class="specical-price">
+                                        595.000₫
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="l-4 m-12 c-12">
+                              <div class="main-product">
+                                <div class="main-product-thumbnail">
+                                  <a href="" class="product-thumnail-link">
+                                    <img class="product-thumnail-img" src="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/3-f0a6b6c1-7ce6-4adf-a2ad-7283039f9850.jpg?v=1659416574000" data-lazyload="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/3-f0a6b6c1-7ce6-4adf-a2ad-7283039f9850.jpg?v=1659416574000" alt="RAW RAGLAN SWEATER - BLACK">
+                                  </a>
+                                  <div class="product-infor">
+                                    <h3 class="product-name">
+                                      <a class="product-name-link" href="/ihtw-tee-cream" title="IHTW TEE - CREAM">IHTW TEE - CREAM</a>
+                                    </h3>
+                                    <div class="product-price">
+                                      <span class="specical-price">
+                                        595.000₫
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="l-4 m-12 c-12">
+                              <div class="main-product">
+                                <div class="main-product-thumbnail">
+                                  <a href="" class="product-thumnail-link">
+                                    <img class="product-thumnail-img" src="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/1.jpg?v=1659346658000" data-lazyload="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/1.jpg?v=1659346658000" alt="GOOD DAY TEE - CREAM">
+                                  </a>
+                                  <div class="product-infor">
+                                    <h3 class="product-name">
+                                      <a class="product-name-link" href="/ihtw-tee-cream" title="IHTW TEE - CREAM">IHTW TEE - CREAM</a>
+                                    </h3>
+                                    <div class="product-price">
+                                      <span class="specical-price">
+                                        380.000₫
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="l-4 m-12 c-12">
+                              <div class="main-product">
+                                <div class="main-product-thumbnail">
+                                  <a href="" class="product-thumnail-link">
+                                    <img class="product-thumnail-img" src="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/5-2c83a9fe-e64c-4834-bd14-91daa679d992.jpg?v=1659346549000" data-lazyload="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/5-2c83a9fe-e64c-4834-bd14-91daa679d992.jpg?v=1659346549000" alt="EMBROIDERED UNI NOWSG HOODIE - BROWN">
+                                  </a>
+                                  <div class="product-infor">
+                                    <h3 class="product-name">
+                                      <a class="product-name-link" href="/ihtw-tee-cream" title="IHTW TEE - CREAM">IHTW TEE - CREAM</a>
+                                    </h3>
+                                    <div class="product-price">
+                                      <span class="specical-price">
+                                        650.000₫
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="l-4 m-12 c-12">
+                              <div class="main-product">
+                                <div class="main-product-thumbnail">
+                                  <a href="" class="product-thumnail-link">
+                                    <img class="product-thumnail-img" src="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/3.jpg?v=1659434795000" data-lazyload="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/3.jpg?v=1659434795000" alt="EMBROIDERED UNI NOWSG HOODIE - GREEN">
+                                  </a>
+                                  <div class="product-infor">
+                                    <h3 class="product-name">
+                                      <a class="product-name-link" href="/ihtw-tee-cream" title="IHTW TEE - CREAM">IHTW TEE - CREAM</a>
+                                    </h3>
+                                    <div class="product-price">
+                                      <span class="specical-price">
+                                        650.000₫
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="l-4 m-12 c-12">
+                              <div class="main-product">
+                                <div class="main-product-thumbnail">
+                                  <a href="" class="product-thumnail-link">
+                                    <img class="product-thumnail-img" src="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/1-55093b23-5e02-4ba3-a6b0-28a4d7183668.jpg?v=1659346025000" data-lazyload="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/1-55093b23-5e02-4ba3-a6b0-28a4d7183668.jpg?v=1659346025000" alt="EMBROIDERED UNI NOWSG HOODIE - GREY">
+                                  </a>
+                                  <div class="product-infor">
+                                    <h3 class="product-name">
+                                      <a class="product-name-link" href="/ihtw-tee-cream" title="IHTW TEE - CREAM">IHTW TEE - CREAM</a>
+                                    </h3>
+                                    <div class="product-price">
+                                      <span class="specical-price">
+                                        650.000₫
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="l-4 m-12 c-12">
+                              <div class="main-product">
+                                <div class="main-product-thumbnail">
+                                  <a href="" class="product-thumnail-link">
+                                    <img class="product-thumnail-img" src="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/10-2f4d8d5b-4700-4e59-ab1e-2d965078ab76.jpg?v=1659344884000" data-lazyload="//bizweb.dktcdn.net/thumb/grande/100/318/614/products/10-2f4d8d5b-4700-4e59-ab1e-2d965078ab76.jpg?v=1659344884000" alt="EMBROIDERED UNI NOWSG HOODIE - CREAM">
+                                  </a>
+                                  <div class="product-infor">
+                                    <h3 class="product-name">
+                                      <a class="product-name-link" href="/ihtw-tee-cream" title="IHTW TEE - CREAM">IHTW TEE - CREAM</a>
+                                    </h3>
+                                    <div class="product-price">
+                                      <span class="specical-price">
+                                        650.000₫
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="clothing-btn-wrap">
+                              <div class="clothing-btn">
+                                <a href="" class="btn-link"> 
+                                <button class="btn-primary center">Xem thêm sản phẩm </button></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>  
+                    </div>
+                   
+                  </div>
+                  </div>   
+               
+                    <div id="Contact" class="contact">
+                      <div class="grid wide">
+                        <div class="contact-heading heading">CONTACT WITH US</div>
+                        <div class="row">
+                          <div class="l-6 m-6 c-12">
+                            <ul class="address-list">
+                              <li class="address-item">Hotline: 0933782768</li>
+                              <li class="address-item">IG: @nowsaigon</li>
+                              <li class="address-item">FB: fb.com/nowsaigon</li>
+                              <li class="address-item">Store I: 445 Sư Vạn Hạnh, P.12, Q.10, TP.HCM.</li>
+                              <li class="address-item">Store II: 48 Trần Quang Diệu, P.14, Q.3, TP.HCM.</li>
+                              <li class="address-item">Store III: 350 Điện Biên Phủ, P.17, Q. Bình Thạnh, TP.HCM.</li>
+                            </ul>
+                          </div>
+                          <div class="l-6 m-6 c-12">
+                            <ul class="address-list">
+                              <li class="address-item">Store IV: G-Town 2, 136 Nguyễn Hồng Đào, P.14, Q.Tân Bình, TP.HCM.</li>
+                              <li class="address-item">Store V: 463 Quang Trung, P.10, Q. Gò Vấp, TP.HCM.</li>
+                              <li class="address-item">Store VI: TNP - 26 Lý Tự Trọng, P. Bến Nghé, Q.1, TP.HCM.</li>
+                              <li class="address-item">Store VII: TNP (Sense Market) - Đối Diện Số 90 Lê Lai, P. Bến Nghé, Q.1, TP.HCM.</li>
+                              <li class="address-item">Store VIII: Cần Thơ: Shop House Vincom Xuân Khánh, PG2-08, Đường 30 tháng 4, Xuân Khánh, Cần Thơ.</li>
+                              <li class="address-item">Store IX: Biên Hoà: Shop House Vincom Biên Hoà,PG2-06, 1096 Phạm Văn Thuận, Tân Mai, Biên Hoà.</li>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+               
+        </div>
+
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="footer-container">
+         <div class="grid wide">
+           <div class="row">
+
+             <div class="l-4 m-12 c-12">
+               <div class="footer-heading">
+                 <span>FOLLOW US</span>                    
+               </div>
+               <ul class="social-list">
+                 <a href="https://www.facebook.com/NOWsaigon" class="social-item-link">
+                   <li class="social-list-item">
+                     <i class="fab fa-facebook"></i>
+                   </li>
+                 </a>
+                 <a href="https://www.instagram.com/nowsaigon/" class="social-item-link">
+                   <li class="social-list-item">
+                     <i class="fab fa-instagram"></i>
+                   </li>
+                 </a>
+                 
+               </ul>
+             </div>
+             <div class="l-4 m-12 c-12">
+               <div class="footer-heading">
+                 <span>HƯỚNG DẪN</span> 
+               </div>
+               <ul class="tutorial-list">
+                 <a href="" class="tutorial-item-link">
+                   <li class="tutorial-list-item">Điều khoản</li>
+                 </a>
+                 <a href="" class="tutorial-item-link">
+                   <li class="tutorial-list-item">Hướng dẫn mua hàng</li>
+                 </a>
+                 <a href="" class="tutorial-item-link">
+                   <li class="tutorial-list-item">Chính sách đổi trả hàng</li>
+                 </a>
+                 <a href="" class="tutorial-item-link">
+                   <li class="tutorial-list-item">Bảo mật thông tin KH</li>
+                 </a>
+                 <a href="" class="tutorial-item-link">
+                   <li class="tutorial-list-item">Chính sách thanh toán</li>
+                 </a>
+               
+               </ul>
+             </div>
+             <div class="l-4 m-12 c-12">
+               <div class="footer-heading">
+                 <span>CONTACT US</span> 
+               </div>
+               
+                 <div class="foot-contact">
+                     <div class="address-block">
+                       <span>
+                         <i class="fas fa-map-marker-alt"></i>
+                       </span>
+                       <p>Store I: 445 Sư Vạn Hạnh, P.12, Q.10.</p>
+                     </div>
+                     <div class="address-block">
+                       <span>
+                         <i class="fas fa-map-marker-alt"></i>
+                       </span>
+                       <p>Store II: 48 Trần Quang Diệu, P.14, Q.3, TP.HCM</p>
+                     </div>
+                     <div class="address-block">
+                       <span>
+                         <i class="fas fa-map-marker-alt"></i>
+                       </span>
+                       <p>Store III: 463 Quang Trung, P.10, Q.Gò Vấp, TP.HCM</p>
+                     </div>
+                     <div class="address-block">
+                       <span>
+                         <i class="fas fa-map-marker-alt"></i>
+                       </span>
+                       <p>Store IV: G-Town 1, 350 Điện Biên Phủ, P.17, Q.Bình Thạnh, TP.HCM</p>
+                     </div>
+                     <div class="address-block">
+                       <span>
+                         <i class="fas fa-map-marker-alt"></i>
+                       </span>
+                       <p>Store V: G-Town 2, 136 Nguyễn Hồng Đào, P.14, Q.Tân Bình, TP.HCM</p>
+                     </div>
+                     <div class="address-block">
+                       <span>
+                         <i class="fas fa-map-marker-alt"></i>
+                       </span>
+                       <p>Store VI: TNP 26LTT - 26 Lý Tự Trọng, P.Bến Nghé, Q.1, TP.HCM</p>
+                     </div>
+                     <div class="address-block">
+                       <span>
+                         <i class="fas fa-map-marker-alt"></i>
+                       </span>
+                       <p>Store VII: TNP - Sense Market, Đối diện số 90 Lê Lai, P.Bến Nghé, Q.1, TP.HCM.</p>
+                     </div>
+                     <div class="address-block">
+                       <span>
+                         <i class="fas fa-map-marker-alt"></i>
+                       </span>
+                       <p>Biên Hoà: Vincom Biên Hoà - Shop House, PG2-06, 1096 Phạm Văn Thuận, Tân Mai, Biên Hoà.</p>
+                     </div>
+                     <div class="address-block">
+                       <span>
+                         <i class="fas fa-map-marker-alt"></i>
+                       </span>
+                       <p>Cần Thơ: Vincom Xuân Khánh - Shop House, PG2-08, Đường 30 tháng 4, Xuân Khánh, Cần Thơ.</p>
+                     </div>
+                     <div class="address-block">
+                       <span>
+                         <i class="fas fa-phone-alt"></i>
+                       </span>
+                       <p>0933782768</p>
+                     </div>  
+                 </div>
+               
+             </div>
+           </div>
+         </div>
+        </div>
+        </footer>
+</body>
+</html>
+
+<script>
+    // Sider Home
+var slideIndex = 0;
+// Cho ta biết chúng ta đang ở slide nào
+var currentSlideIndex = 0;
+// Mảng lưu các slide của chúng ta
+var slideArray = [];
+
+// Hàm này sẽ giúp chúng ta tạo ra các đối tượng slide
+// bao gồm: tiêu đề, mô tả, ảnh, đường dẫn khi nhấp vào button trên slide, 
+// và id của mỗi slide
+function Slide(title, subtitle, background, link) {
+  this.title = title;
+  this.subtitle = subtitle;
+  this.background = background;
+  this.link = link;
+  // we need an id to target later using getElementById
+  this.id = "slide" + slideIndex;
+  // Add one to the index for the next slide number
+  slideIndex++;
+  // Add this Slide to our array
+  slideArray.push(this);
+}
+
+
+// Tạo các đối tượng slide, bạn có thể tạo nhiều hơn
+
+var walkingDead = new Slide(
+  "NOWSG BRAND",
+  "Needs Of Wisdom®",
+  "./assest/img/slider-1.png",
+  "https://shopee.vn/nowsaigon"
+);
+
+var bigBang = new Slide(
+  "The Official Store",
+  "NOW EST.MMXV",
+  "./assest/img/slider-2.jpg",
+  "https://shopee.vn/nowsaigon"
+);
+
+var LastMan = new Slide(
+  "The Size Chart",
+  "It's easy to choose a size for you",
+  "./assest/img/slider-3.jpg",
+  "https://shopee.vn/nowsaigon"
+);
+
+// Từ mảng slide đã tạo, ta tiến hành đưa nó vào source HTML
+function buildSlider() {
+  // A variable to hold all our HTML
+  var myHTML;
+
+  // Go through the Array and add the code to our HTML
+  for (var i = 0; i < slideArray.length; i++) {
+    myHTML +=
+      "<div id='" +
+      slideArray[i].id +
+      "' class='singleSlide' style='background-image:url(" +
+      slideArray[i].background +
+      ");'>" +
+      "<div class='slideOverlay'>" +
+      "<div class='home-header-slide'>" +
+      slideArray[i].title +
+      "</div>" +
+      "<div class='home-title-slide'>" +
+      slideArray[i].subtitle +
+      "</div>" +
+      "<a class='home-slide-link' href='" +
+      slideArray[i].link +
+      "' target='_blank'>Open Link</a>" +
+      "</div>" +
+      "</div>";
+  }
+
+  // Đưa HTML chúng ta vừa tạo vào id #mySlider
+  document.getElementById("homeSlider").innerHTML = myHTML;
+
+  // Đồng thời hiển thị slide đầu tiên
+  document.getElementById("slide" + currentSlideIndex).style.left = 0;
+}
+
+// Gọi hàm thực thi
+buildSlider();
+
+// Xử lý bấm nút chuyển slide trước đó
+function prevSlide() {
+  // Tìm slide trước đó
+  var nextSlideIndex;
+  // Nếu chỉ số slide là 0, về slide cuối
+  if (currentSlideIndex === 0) {
+    nextSlideIndex = slideArray.length - 1;
+  } else {
+    // Nếu không thì giảm chỉ số đi 1
+    nextSlideIndex = currentSlideIndex - 1;
+  }
+
+  // Ẩn slide hiện tại, hiện slide "currentSlideIndex"
+  document.getElementById("slide" + nextSlideIndex).style.left = "-100%";
+  document.getElementById("slide" + currentSlideIndex).style.left = 0;
+
+  // Thêm class để chuyển slide có animation đã định nghĩa ở bước 3
+    document
+    .getElementById("slide" + nextSlideIndex)
+    .setAttribute("class", "singleSlide slideInLeft");
+  document
+    .getElementById("slide" + currentSlideIndex)
+    .setAttribute("class", "singleSlide slideOutRight");
+
+  // Cập nhật giá trị slide hiện tại
+  currentSlideIndex = nextSlideIndex;
+}
+
+// Xử lý bấm nút chuyển slide tiếp theo
+// Cách xử lý tương tự như prevSlide đã trình bày ở trên
+function nextSlide() {
+  var nextSlideIndex;
+  if (currentSlideIndex === slideArray.length - 1) {
+    nextSlideIndex = 0;
+  } else {
+    nextSlideIndex = currentSlideIndex + 1;
+  }
+
+  document.getElementById("slide" + nextSlideIndex).style.left = "100%";
+  document.getElementById("slide" + currentSlideIndex).style.left = 0;
+
+  document
+    .getElementById("slide" + nextSlideIndex)
+    .setAttribute("class", "singleSlide slideInRight");
+  document
+    .getElementById("slide" + currentSlideIndex)
+    .setAttribute("class", "singleSlide slideOutLeft");
+
+  currentSlideIndex = nextSlideIndex;
+}
+</script>
+
+<script>
+  $(document).ready(function(){
+    $('.counter').counterUp({
+      delay: 5,
+      time: 6000
+    });
+});
+</script>
+
+<!-- Scroll Indicator -->
+<script>
+  // When the user scrolls the page, execute myFunction 
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("progressBar").style.width = scrolled + "%";
+  }
+  </script>
+  
+<!-- Modal Box (User Login)-->
+<script>
+  // Get the modal
+  var usermodal = document.getElementById("userModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("userBtn");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("login-close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    usermodal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    usermodal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+
+  // window.onclick = function(event) {
+  //   if (event.target == usermodal) {
+  //     usermodal.style.display = "none";
+  //   }
+  // }
+  </script>
+  
+  <!-- Search Box -->
+  <script>
+
+    var overlay = document.getElementById("searchOverlay");
+
+    function openSearch() {
+      document.getElementById("searchOverlay").style.display = "block";
+    }
+    
+    function closeSearch() {
+      document.getElementById("searchOverlay").style.display = "none";
+    }
+
+     // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == overlay) {
+      overlay.style.display = "none";
+    }
+  }
+    </script>
+
+    <!-- Show Password -->
+    <script>
+      function showPass() {
+  var x = document.getElementById("loginPass");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+    </script>
